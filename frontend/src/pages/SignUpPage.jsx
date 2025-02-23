@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
-import { Loader2, Mail, MessageSquare } from "lucide-react";
-import { User, Lock, EyeOff, Eye } from "lucide-react";
+import {
+  Loader2,
+  Mail,
+  MessageSquare,
+  User,
+  Lock,
+  EyeOff,
+  Eye,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import AuthImagePattern from "../components/AuthImagePattern";
 import toast from "react-hot-toast";
@@ -134,6 +141,7 @@ const SignUpPage = () => {
               {isSigningUp ? (
                 <>
                   <Loader2 className="size-5 animate-spin" />
+                  Loading...
                 </>
               ) : (
                 "Create Account"
@@ -156,7 +164,7 @@ const SignUpPage = () => {
 
       <AuthImagePattern
         title="Join our community"
-        subtitle="Connect with friends, share moments, and stay in touch with your friends."
+        subtitle="Connect with friends, share moments, and stay in touch with your loved ones."
       />
     </div>
   );
