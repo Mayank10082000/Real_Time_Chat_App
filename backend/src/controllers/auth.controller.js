@@ -104,7 +104,13 @@ export const updateProfile = async (req, res) => {
       { new: true }
     );
 
-    res.status(200).json({ updatedUser });
+    res.status(200).json({
+      _id: updatedUser._id,
+      fullName: updatedUser.fullName,
+      email: updatedUser.email,
+      profilePic: updatedUser.profilePic,
+      createdAt: updatedUser.createdAt,
+    });
   } catch (error) {
     console.log("Error in updateProfile controller:", error.message);
     res.status(500).json({ message: "Internal Server error" });
